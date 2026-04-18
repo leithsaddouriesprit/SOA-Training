@@ -36,14 +36,19 @@ public class UERessources {
         if (code != null) {
             UniteEnseignement ue = ueBusiness.getUEByCode(code);
             if (ue != null) {
-                return Response.status(Response.Status.OK).entity(ue).build();
+                return Response.status(Response.Status.OK)
+                        .entity(ue)
+                        .build();
             }
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return Response.status(Response.Status.NOT_FOUND)
+                           .build();
         }
 
         if (semestre != null) {
             List<UniteEnseignement> liste = ueBusiness.getUEBySemestre(semestre);
-            return Response.status(Response.Status.OK).entity(liste).build();
+            return Response.status(Response.Status.OK)
+                           .entity(liste)
+                            .build();
         }
 
         return Response.status(Response.Status.OK)
