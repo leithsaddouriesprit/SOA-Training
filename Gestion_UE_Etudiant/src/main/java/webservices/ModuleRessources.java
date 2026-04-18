@@ -25,6 +25,7 @@ public class ModuleRessources {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    /// swagger
     @Operation(summary = "Ajouter un module", description = "Ajoute un nouveau module pédagogique")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Module ajouté avec succès",
